@@ -6,9 +6,10 @@
 |--------------|-----------|----------|
 | OfficeUpdaterProject | [OfficeUpdaterProject.xlam][ptUserAddin] | [![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/OfficeUpdaterProject/total.svg)](https://github.com/SanbiVN/OfficeUpdaterProject/releases/download/v1.0/OfficeUpdaterProject.xlam)  |
 
+Sao chép toàn bộ Module và Class Module vào dự án, đổi thông tin tại Module A_Center.
 
-#### Tự động cập nhật chính dự án Microsoft Office chứa mã VBA\
-Tại sao cần có phương pháp này để VBA tự động cập nhật cho chính ứng dụng chứa nó?\
+#### Tự động cập nhật chính dự án Microsoft Office chứa mã VBA
+Tại sao cần có phương pháp này để VBA tự động cập nhật cho chính ứng dụng chứa nó?
 1. VBA không thể ghi đè tệp Excel đang mở nếu không xử lý mã đúng phương pháp.​
 2. VBA có thể tự mở chính nó ở phiên ReadOnly và cập nhật ngược lại cho tệp chính tệp đang mở. Tuy nhiên không tách VBA ra khỏi tiến trình chính thì sẽ tự kết thúc tiến trình theo tệp chính nếu đóng tệp chính để cập nhật.​
 3. Có thể khởi tạo một Excel ở tiến trình mới tuy nhiên sẽ có cửa sổ trên màn hình, nếu ẩn bởi VBA vẫn tạo ra một nhấp nháy rất khó chịu cho người dùng.​
