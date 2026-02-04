@@ -31,6 +31,12 @@ Tại sao cần có phương pháp này để VBA tự động cập nhật cho 
 6. Ở tiến trình mới truy cập tất cả các tiến trình Excel để thoát tệp chính, gỡ cài đặt, ghi đè hoặc tạo bản lưu trữ.​
 7. Mở tệp phiên bản mới ở tất cả các tiến trình Excel. Và thông báo để hoàn thành.​
 ​
+#### Chức năng cập nhật tự động
+1. Tự động tiếm kiếm phiên bản cập nhật mới.
+2. Tự động cập nhật lên phiên bản mới nhất.
+3. Tự động tạo bản sao lưu để phục hồi.
+4. Có hỗ trợ cập nhật từ tệp trong thư mục.
+5. Có hỗ trợ phục hồi lại phiên bản trước đó nhanh chóng.
 ​
 ### Hướng dẫn​
 Trong tệp add-in OfficeUpdaterProject.xlam bên dưới trong VBA có module A_Center chứa thông tin tải bản cập nhật, và khởi chạy lớp cập nhật.
