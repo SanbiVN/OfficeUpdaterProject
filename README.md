@@ -1,4 +1,5 @@
 # OfficeUpdaterProject
+Tạo Add-in, tệp Excel, Word, Access, PowerPoint, Outlook tự động cập nhật phiên bản mới từ Cloud cho chính nó
 <!-- items that need to be updated release to release -->
 [ptUserAddin]: https://github.com/SanbiVN/OfficeUpdaterProject/releases/download/v1.0/OfficeUpdaterProject.xlam
 
