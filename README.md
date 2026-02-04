@@ -63,6 +63,21 @@ Nhấn nút Kiểm tra cập nhật, sẽ có thông báo Ballon tại hệ th�
  - **enabled**: on/off, xét xem có cần cập nhật hay không nếu để on.
  - **modules**: các dự án con (nếu có), modules chứa các thông tin như đã liệt kê cho các dự án con cần cập nhật.
 
+
+#### Các khóa phụ để dự án được chi tiết hơn:​
+ - **title**: tiêu đề dự án
+ - **description**: thông tin dự án
+ - **group_id**: id nhóm
+ - **group_name**: tên nhóm
+ - **root**: tên gốc chứa dự án
+ - **hash**: mã hash của tệp nếu có để đối chiếu
+ - **website**: trang web chính
+ - **helps_file**: tệp trợ giúp
+ - **helps_url**: đường dẫn trợ giúp
+ - **author**: người tạo
+ - **status**: trạng thái
+
+
 Trong module A_Center chứa các thông tin về dự án, hãy sửa các thông tin tương ứng với dự án của bạn
 
 ```VBA
@@ -109,18 +124,4 @@ Private Function JsonProjectUpgrade() As String
   s = s & "]"
   JsonProjectUpgrade = s
 End Function
-
 ```
-
-#### Các khóa phụ để dự án được chi tiết hơn:​
- - **title**: tiêu đề dự án
- - **description**: thông tin dự án
- - **group_id**: id nhóm
- - **group_name**: tên nhóm
- - **root**: tên gốc chứa dự án
- - **hash**: mã hash của tệp nếu có để đối chiếu
- - **website**: trang web chính
- - **helps_file**: tệp trợ giúp
- - **helps_url**: đường dẫn trợ giúp
- - **author**: người tạo
- - **status**: trạng thái
