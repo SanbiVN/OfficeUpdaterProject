@@ -6,6 +6,7 @@
 |--------------|-----------|----------|
 | OfficeUpdaterProject | [OfficeUpdaterProject.xlam][ptUserAddin] | [![Lượt tải](https://img.shields.io/github/downloads/SanbiVN/OfficeUpdaterProject/total.svg)](https://github.com/SanbiVN/OfficeUpdaterProject/releases/download/v1.0/OfficeUpdaterProject.xlam)  |
 
+(Pass VBA là 1)\
 Sao chép toàn bộ Module và Class Module vào dự án, đổi thông tin tại Module A_Center.
 
 #### Tự động cập nhật chính dự án Microsoft Office chứa mã VBA
