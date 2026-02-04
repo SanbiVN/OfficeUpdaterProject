@@ -42,26 +42,26 @@ Nhấn nút Kiểm tra cập nhật, sẽ có thông báo Ballon tại hệ th�
 <img width="333" height="132" alt="1770199388913" src="https://github.com/user-attachments/assets/372aebbf-8822-482e-8096-19315aa854e9" />
 
 #### Các khóa trong json để lấy thông tin cần thiết để thực hiện kiểm tra và cập nhật:​
- - name: tên dự án không có khoảng trắng
- - filename: tên tệp
- - version: phiên bản để đối chiếu
- - installer_url: đường dẫn tải thông tin hoặc tệp cần cập nhật
- - url_type: kiểu đường dẫn tải thông tin là gì, ví dụ: github.api.releases.lastest có nghĩa là tải từ api github tại phiên bản cuối cùng.
- - file_compress: tệp có được nén hay không
- - path_compress: đường dẫn thư mục trong tệp nén dẫn đến vị trí chứa tệp cần cập nhật
- - check_version_in: kiểm tra ở đâu trong dữ liệu được tải về từ github.api.releases.lastest, gồm: tag, title, asset (hoặc tự viết mã thêm)
- - file_type: kiểu tệp cần cập nhật là gì, gồm: Excel, Word, Access, PowerPoint, file, ... (hoặc tự viết mã thêm)
- - path_location: đường dẫn gốc thay cho đường dẫn tuyệt đối (nếu cần), gồm:
+ - **name**: tên dự án không có khoảng trắng
+ - **filename**: tên tệp
+ - **version**: phiên bản để đối chiếu
+ - **installer_url**: đường dẫn tải thông tin hoặc tệp cần cập nhật
+ - **url_type**: kiểu đường dẫn tải thông tin là gì, ví dụ: github.api.releases.lastest có nghĩa là tải từ api github tại phiên bản cuối cùng.
+ - **file_compress**: tệp có được nén hay không
+ - **path_compress**: đường dẫn thư mục trong tệp nén dẫn đến vị trí chứa tệp cần cập nhật
+ - **check_version_in**: kiểm tra ở đâu trong dữ liệu được tải về từ github.api.releases.lastest, gồm: tag, title, asset (hoặc tự viết mã thêm)
+ - **file_type**: kiểu tệp cần cập nhật là gì, gồm: Excel, Word, Access, PowerPoint, file, ... (hoặc tự viết mã thêm)
+ - **path_location**: đường dẫn gốc thay cho đường dẫn tuyệt đối (nếu cần), gồm:
 > - directory: thư mục cùng với thư mục chứa ứng dụng
 > - temp: thư mục temp
 > - local: thư mục local
 > - programData: thư mục programData
 > - UserProfiles: thư mục User
 > - Windows: thư mục Windows
- - path_target: đường dẫn dẫn đến vị trí ghi tệp cần cập nhật (nếu có), nếu đường dẫn không có tiền tố thì lấy path_location nối vào.
- - path_registry: đường dẫn registry, dùng để ghi và xuất thông tin (nếu cần)
- - enabled: on/off, xét xem có cần cập nhật hay không nếu để on.
- - modules: các dự án con (nếu có), modules chứa các thông tin như đã liệt kê cho các dự án con cần cập nhật.
+ - **path_target**: đường dẫn dẫn đến vị trí ghi tệp cần cập nhật (nếu có), nếu đường dẫn không có tiền tố thì lấy path_location nối vào.
+ - **path_registry**: đường dẫn registry, dùng để ghi và xuất thông tin (nếu cần)
+ - **enabled**: on/off, xét xem có cần cập nhật hay không nếu để on.
+ - **modules**: các dự án con (nếu có), modules chứa các thông tin như đã liệt kê cho các dự án con cần cập nhật.
 
 Trong module A_Center chứa các thông tin về dự án, hãy sửa các thông tin tương ứng với dự án của bạn
 
@@ -113,14 +113,14 @@ End Function
 ```
 
 #### Các khóa phụ để dự án được chi tiết hơn:​
- - title: tiêu đề dự án
- - description: thông tin dự án
- - group_id: id nhóm
- - group_name: tên nhóm
- - root: tên gốc chứa dự án
- - hash: mã hash của tệp nếu có để đối chiếu
- - website: trang web chính
- - helps_file: tệp trợ giúp
- - helps_url: đường dẫn trợ giúp
- - author: người tạo
- - status: trạng thái
+ - **title**: tiêu đề dự án
+ - **description**: thông tin dự án
+ - **group_id**: id nhóm
+ - **group_name**: tên nhóm
+ - **root**: tên gốc chứa dự án
+ - **hash**: mã hash của tệp nếu có để đối chiếu
+ - **website**: trang web chính
+ - **helps_file**: tệp trợ giúp
+ - **helps_url**: đường dẫn trợ giúp
+ - **author**: người tạo
+ - **status**: trạng thái
