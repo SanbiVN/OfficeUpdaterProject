@@ -9,6 +9,12 @@
 (Pass VBA là 1)\
 Sao chép toàn bộ Module và Class Module vào dự án, đổi thông tin tại Module A_Center.
 
+#### ĐƯỜNG DẪN TẢI THÔNG TIN VÀ ĐĂNG TẢI
+- Đường dẫn trả về json để lấy thông tin tải tệp cập nhật:
+https://api.github.com/repos/SanbiVN/OfficeUpdaterProject/releases/latest
+- Đường dẫn để Upload tệp lên cloud:
+https://github.com/SanbiVN/OfficeUpdaterProject/releases
+
 #### Tự động cập nhật chính dự án Microsoft Office chứa mã VBA
 Tại sao cần có phương pháp này để VBA tự động cập nhật cho chính ứng dụng chứa nó?
 1. VBA không thể ghi đè tệp Excel đang mở nếu không xử lý mã đúng phương pháp.​
@@ -56,6 +62,55 @@ Nhấn nút Kiểm tra cập nhật, sẽ có thông báo Ballon tại hệ th�
  - path_registry: đường dẫn registry, dùng để ghi và xuất thông tin (nếu cần)
  - enabled: on/off, xét xem có cần cập nhật hay không nếu để on.
  - modules: các dự án con (nếu có), modules chứa các thông tin như đã liệt kê cho các dự án con cần cập nhật.
+
+Trong module A_Center chứa các thông tin về dự án, hãy sửa các thông tin tương ứng với dự án của bạn
+
+```VBA
+
+Public Const ProjectName = "OfficeUpdaterProject"
+Public Const ProjectFileName = "OfficeUpdaterProject"
+Public Const projectLibName = "OfficeUpdaterProject"
+Public Const ProjectVersion = "1.0"
+Public Const projectAuthor = "Sanbi"
+Public Const projectGithubRepo = "SanbiVN/" & ProjectName
+
+Private Function JsonProjectUpgrade() As String
+  Dim s$
+      s = "["
+  s = s & "   {""" & ProjectName & """: "
+  s = s & "       {"
+  s = s & "           ""name"": """ & ProjectName & ""","
+  s = s & "           ""filename"": """ & ProjectName & ".xlam"","
+  s = s & "           ""version"": """ & ProjectVersion & ""","
+  s = s & "           ""title"": """","
+  s = s & "           ""description"": """","
+  s = s & "           ""group_id"": ""group1"","
+  s = s & "           ""group_name"": """","
+  s = s & "           ""root"": """","
+  s = s & "           ""installer_url"": ""https://api.github.com/repos/" & projectGithubRepo & "/releases/latest"","
+  s = s & "           ""url_type"": ""github.api.releases.latest"","
+  s = s & "           ""file_compress"": false,"
+  s = s & "           ""path_compress"": """","
+  s = s & "           ""check_version_in"": ""tag"","
+  s = s & "           ""file_type"": ""Excel"","
+  s = s & "           ""hash"": ""hashfile"","
+  s = s & "           ""website"": ""https://github.com/" & projectGithubRepo & ""","
+  s = s & "           ""helps_file"": """","
+  s = s & "           ""helps_url"": ""https://github.com/" & projectGithubRepo & ""","
+  s = s & "           ""enabled"": ""on"","
+  s = s & "           ""path_location"": ""directory"","
+  s = s & "           ""path_target"": """","
+  s = s & "           ""path_registry"": """","
+  s = s & "           ""author"": """ & projectAuthor & ""","
+  s = s & "           ""status"": ""none"","
+  s = s & "           ""modules"": []"
+  s = s & "       }"
+  s = s & "   }"
+  s = s & "]"
+  JsonProjectUpgrade = s
+End Function
+
+```
 
 #### Các khóa phụ để dự án được chi tiết hơn:​
  - title: tiêu đề dự án
